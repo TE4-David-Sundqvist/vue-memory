@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue@next"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="main">
+        <button @click="start">start</button>
+        <ul>
 
+            <Card v-for="card in cards" :src="card.img"></Card>
+
+        </ul>
         
 
     </div>
     <template id="cardtemplate">
         <div class="card">
-            <img src="" class="front">
+            <img :src="card.img" class="front">
             <img src="img/back.png" class="back">
         </div>
     </template>
